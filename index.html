@@ -15,17 +15,15 @@
         <h1 class="large">YAHTZEE</h1>
 
         <div id="diceBox2"></div><br />
+        <button id="btn_dice" onclick="throwDice()">Gooi dobbelstenen</button><br /><br />
         <div id="diceBox"></div>
-
+        <br />
         <div class="menu">
             <div class="mLeft"><h2 onclick="score()">Scoreblok</h2></div>
             <div class="mRight"><h2 onclick="rules()">Spelregels</h2></div>
         </div>
-        <div class="page1">Score</div>
-        <div class="page2">Yahtzee Spelregels</div>
-        <br />
-        <button id="btn_dice" onclick="throwDice()">Gooi dobbelstenen</button>
-        <!-- <table>
+        <div class="page1" id="page1"><h2>Yahtzee Scoreblok</h2>
+        <table cellspacing="0" cellpadding="0">
             <tr><td>Deel 1</td><td>puntentelling</td><td>1e spel</td></tr>
             <tr><td>Enen</td><td>tel alle enen</td><td></td></tr>
             <tr><td>Tweeen</td><td>tel alle tweeen</td><td></td></tr>
@@ -47,7 +45,14 @@
             <tr><td colspan="2">totaal onderste helft</td><td></td></tr>
             <tr><td colspan="2">totaal bovenste helft</td><td></td></tr>
             <tr><td colspan="2">totaal generaal</td><td></td></tr>
-        </table> -->
+        </table>
+        </div>
+        <div class="page2" id="page2"><h2>Yahtzee Spelregels</h2>
+            <p>https://nl.wikipedia.org/wiki/Yahtzee</p>
+        </div>
+        <br />
+    
+        
     </div>
     <script src="logic.js"></script>
 </body>

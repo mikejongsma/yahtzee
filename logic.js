@@ -115,7 +115,11 @@ function rm6(){
 
 function score(){
     console.log('Laat het scoreblok zien en verberg de spelregels.');
+    document.getElementById("page2").style.display = "none";
+    document.getElementById("page1").style.display = "block";
 }
 function rules(){
     console.log('Laat de spelregels zien en verberg het scoreblok.');
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "block";
 }

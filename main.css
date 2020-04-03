@@ -28,21 +28,36 @@ h3 {
 
 .menu{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
 }
+
+.page1{
+    display: none;
+    background-color: rgb(37, 91, 60);
+    padding:20px;
+}
+
+.page2{
+    display: none;
+    background-color: rgb(37, 91, 60);
+    padding:20px;
+}
+
 .mLeft{
-    background-color: red;
+    background-color: rgb(37, 91, 60);
+    padding:10px;
 }
 .mRight{
-    background-color: blue;
+    background-color: rgb(37, 91, 60);
+    padding: 10px;
 }
 
 table {
-    border: 1px solid rgb(235, 146, 146);
+    border: 1px solid black
 }
 
 table td {
-    border: 1px solid rgb(235, 146, 146);
+    border: 1px solid rgb(34, 79, 53);
     padding: 10px;
 }
 
