@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Yahtzee</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <h1 class="large">YAHTZEE</h1>
+
+        <div id="diceBox2"></div><br />
+        <div id="diceBox"></div>
+
+        <div class="menu">
+            <div class="mLeft"><h2 onclick="score()">Scoreblok</h2></div>
+            <div class="mRight"><h2 onclick="rules()">Spelregels</h2></div>
+        </div>
+        <div class="page1">Score</div>
+        <div class="page2">Yahtzee Spelregels</div>
+        <br />
+        <button id="btn_dice" onclick="throwDice()">Gooi dobbelstenen</button>
+        <!-- <table>
+            <tr><td>Deel 1</td><td>puntentelling</td><td>1e spel</td></tr>
+            <tr><td>Enen</td><td>tel alle enen</td><td></td></tr>
+            <tr><td>Tweeen</td><td>tel alle tweeen</td><td></td></tr>
+            <tr><td>Drieen</td><td>tel alle drieen</td><td></td></tr>
+            <tr><td>Vieren</td><td>tel alle vieren</td><td></td></tr>
+            <tr><td>Vijven</td><td>tel alle vijven</td><td></td></tr>
+            <tr><td>Zessen</td><td>tel alle zessen</td><td></td></tr>
+            <tr><td colspan="2">totaal aantal punten</td><td></td></tr>
+            <tr><td colspan="2">Bonus (63 of meer = 35 extra)</td><td></td></tr>
+            <tr><td colspan="2">totaal deel 1</td><td></td></tr>
+            <tr><td>Deel 2</td><td>puntentelling</td><td></td></tr>
+            <tr><td>Three of a kind</td><td>totaal v.d. 5 stenen</td><td></td></tr>
+            <tr><td>Carré</td><td>totaal v.d. 5 stenen</td><td></td></tr>
+            <tr><td>Full House</td><td>25 punten</td><td></td></tr>
+            <tr><td>Kleine Straat</td><td>30 punten</td><td></td></tr>
+            <tr><td>Grote Straat</td><td>40 punten</td><td></td></tr>
+            <tr><td>Yahtzee</td><td>50 punten</td><td></td></tr>
+            <tr><td>Chance</td><td>totaal v.d. 5 stenen</td><td></td></tr>
+            <tr><td colspan="2">totaal onderste helft</td><td></td></tr>
+            <tr><td colspan="2">totaal bovenste helft</td><td></td></tr>
+            <tr><td colspan="2">totaal generaal</td><td></td></tr>
+        </table> -->
+    </div>
+    <script src="logic.js"></script>
+</body>
+
+</html>

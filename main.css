@@ -1,0 +1,226 @@
+body {
+    background-color: seagreen;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Anton', sans-serif;
+    font-weight: normal;
+}
+
+.large {
+    font-size: 6em;
+    font-weight: thin;
+    letter-spacing: .3em;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    background-color: rgb(40, 105, 68);
+    margin: auto;
+    padding: 100px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+.mLeft{
+    background-color: red;
+}
+.mRight{
+    background-color: blue;
+}
+
+table {
+    border: 1px solid rgb(235, 146, 146);
+}
+
+table td {
+    border: 1px solid rgb(235, 146, 146);
+    padding: 10px;
+}
+
+
+/* Extra Items */
+.freeze {
+    background-color: rgb(165, 177, 103);
+    /* padding:20px;
+    font-size: 24px; */
+}
+
+#btn_dice {
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+
+
+/* Draw the dice */
+
+#diceBox {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: seagreen;
+    border: 3px solid #333;
+    border-radius: 10px;
+}
+
+#diceBox2{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: seagreen;
+    border: 5px solid #333;
+    border-style: dashed;   
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #292929;
+    border-radius: 90px;
+}
+
+/* First Die */
+
+#d1,
+#d2,
+#d3,
+#d4,
+#d5,
+#d6 {
+    float: left;
+}
+
+.diceOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 242, 228);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: rgb(38, 85, 44) 0px 5px 5px;
+}
+
+/* Second Die */
+
+.diceTwo {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 242, 228);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: rgb(38, 85, 44) 0px 5px 5px;
+}
+
+.diceTwo .dot:nth-of-type(2) {
+    align-self: flex-end;
+}
+
+/* Third Die */
+
+.diceThree {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 242, 228);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: rgb(38, 85, 44) 0px 5px 5px;
+}
+
+.diceThree .dot:nth-of-type(2) {
+    align-self: center;
+}
+
+.diceThree .dot:nth-of-type(3) {
+    align-self: flex-end;
+}
+
+/* Fourth Die */
+
+.diceFour {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 242, 228);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: rgb(38, 85, 44) 0px 5px 5px;
+}
+
+.diceFour .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Fifth Die */
+
+.diceFive {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 242, 228);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: rgb(38, 85, 44) 0px 5px 5px;
+}
+
+.diceFive .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.diceFive .dot:nth-of-type(2) {
+    align-self: center;
+}
+
+/* Sixth Die */
+
+.diceSix {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 242, 228);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: rgb(38, 85, 44) 0px 5px 5px;
+}
+
+.diceSix .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+/* Rules for mobile */
+
+@media only screen and (max-width: 700px) {
+    .large{
+        font-size:4em;
+        text-align: center;
+    }
+    .container{
+        padding:20px;
+        text-align: center;
+    }
+  }
