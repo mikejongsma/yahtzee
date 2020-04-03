@@ -26,28 +26,29 @@ h3 {
     padding: 100px;
 }
 
-.menu{
+.menu {
     display: flex;
     justify-content: flex-end;
 }
 
-.page1{
+.page1 {
     display: none;
     background-color: rgb(37, 91, 60);
-    padding:20px;
+    padding: 20px;
 }
 
-.page2{
+.page2 {
     display: none;
     background-color: rgb(37, 91, 60);
-    padding:20px;
+    padding: 20px;
 }
 
-.mLeft{
+.mLeft {
     background-color: rgb(37, 91, 60);
-    padding:10px;
+    padding: 10px;
 }
-.mRight{
+
+.mRight {
     background-color: rgb(37, 91, 60);
     padding: 10px;
 }
@@ -87,13 +88,13 @@ table td {
     border-radius: 10px;
 }
 
-#diceBox2{
+#diceBox2 {
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
     background-color: seagreen;
     border: 5px solid #333;
-    border-style: dashed;   
+    border-style: dashed;
 }
 
 .dot {
@@ -230,12 +231,13 @@ table td {
 /* Rules for mobile */
 
 @media only screen and (max-width: 700px) {
-    .large{
-        font-size:4em;
+    .large {
+        font-size: 4em;
         text-align: center;
     }
-    .container{
-        padding:20px;
+
+    .container {
+        padding: 20px;
         text-align: center;
     }
-  }
+}
