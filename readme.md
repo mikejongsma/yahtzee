@@ -10,7 +10,7 @@ Activeer Chrome Developer Tools (console) voor meer info en context.
 
 ### Todo
 
-[ x ] - Check inbouwen voor aantal dobbelstenen in de dobbelbak.
-[ x ] - Check inbouwen voor aantal te gooien dobbelstenen per beurt.
-[] - Totale waarde van punten aan chance toekennen om te verdelen bij 'chance'.
-[] - Totale waarde van punten toekennen aan 1e deel van het spel. (aantal 1en, 2en, 3en etc...).
+* [ x ] - Check inbouwen voor aantal dobbelstenen in de dobbelbak.
+* [ x ] - Check inbouwen voor aantal te gooien dobbelstenen per beurt.
+* [] - Totale waarde van punten aan chance toekennen om te verdelen bij 'chance'.
+* [] - Totale waarde van punten toekennen aan 1e deel van het spel. (aantal 1en, 2en, 3en etc...).
