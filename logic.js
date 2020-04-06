@@ -5,6 +5,7 @@ let diceInitArray = [];
 let freezeCounter = 0;
 let diceNr = 5;
 let diceRemove = 0;
+let diceTotal = diceNr - diceRemove;
 let removeArray = [];
 
 console.log('Welkom bij het dobbelspel Yahtzee. klik op de knop om de dobbelstenen te gooien.');
@@ -12,23 +13,22 @@ console.log('Welkom bij het dobbelspel Yahtzee. klik op de knop om de dobbelsten
 // Functie voor het 'gooien' van de dobbelstenen.
 function throwDice() {
     // tel het aantal elementen in de diceInitArray
-    console.log("Aantal dobbelstenen in de dobbelbak: " + diceInitArray.length);
+    console.log("Aantal dobbelstenen in de opnieuw gooien bak: " + diceRemove);
+    console.log("Aantal te gooien dobbelstenen: " + diceTotal);
     // wanneer lengte van de dobbelbak array gelijk is aan 5 vraag dan toestemming om alle dobbelstenen opnieuw te gooien.
-    if(diceInitArray.length == 5){
+    if(diceInitArray.length = 5){
         console.log("Er liggen 5 dobbelstenen in de dobbelbak, je hebt geen stenen aangewezen om opnieuw te gooien. Daarom gooi ik alle dobbelstenen opnieuw!");
         diceInitArray = [];
-        return;
+        diceBox.innerHTML = "";
     }
     if(diceInitArray.length < 5){
-        console.log("Aantal dobbelstenen in de dobbelbak is lager dan 5.");
-        console.log("Het aantal stenen om te gooien: " + diceNr);
+        console.log(diceNr);
     }
     
     for (i = 0; i < diceNr; i++) {
         let diceNr = Math.floor(Math.random() * 6) + 1;
         let cc = document.getElementById('diceBox');
         diceInitArray.push(diceNr);
-        console.log(diceNr);
 
         // switch voor de verschillende opties
         switch (diceNr) {
@@ -72,16 +72,31 @@ function throwDice() {
     }
 }
 
-// Behoud van dobbelstenen (Hier 1 functie voor schrijven)
-
 function rmDie(id){
     console.log(id);
     console.log('Deze dobbelsteen wil ik opnieuw gooien: ' + id);
     let reThrow = document.getElementById(id);
     reThrow.remove();
     removeArray.push(id);
-    diceNr == diceNr - 1;
+    diceNr === diceNr --;
     console.log(removeArray);
+    diceRemove ++;
+    addToRethrow(id);
+}
+
+//test function update required.
+function addToRethrow(id){
+    console.log(id, diceNr);
+    //test create element
+    let rtd = document.getElementById('diceBox2');
+
+    switch(id){
+        case id: 
+        let sd = document.createElement('div');
+        rtd.innerHTML += id;
+        rtd.appendChild(sd);
+    }
+    
 }
 
 // Laat score of spelregels zien
