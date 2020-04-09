@@ -132,6 +132,9 @@ body{
     border:10px solid black;
     display: none;
 }
+#action1:focus{
+    outline: none;
+}
 
 .footer{
     text-align: center;
