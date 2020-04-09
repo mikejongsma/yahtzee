@@ -1,6 +1,7 @@
 # Yahtzee - het dobbelspel.
 
 Activeer Chrome Developer Tools (console) voor meer info en context.
+* Bekijk hier het project: https://mikejongsma.github.io/yahtzee/
 
 ### Refactoring Code
 
