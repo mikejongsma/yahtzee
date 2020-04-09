@@ -1,249 +1,170 @@
-body {
-    background-color: seagreen;
-    color: rgb(255, 255, 255);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-family: 'Montserrat', sans-serif;
-}
-
-h1,
-h2,
-h3 {
-    font-family: 'Anton', sans-serif;
-    font-weight: normal;
-}
-
-.large {
-    font-size: 6em;
-    font-weight: thin;
-    letter-spacing: .3em;
+body{
+    background-color: rgb(237, 237, 237);
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    padding: 0;
 }
-
-.container {
-    max-width: 800px;
-    background-color: rgb(40, 105, 68);
+.largeTitle{
+    font-size:40px;
+    font-weight:bold;
+    margin:0;
+    padding:0;
+}
+.container{
+    max-width:600px;
+    width: 100%;
     margin: auto;
-    padding: 100px;
 }
-
-.menu {
+.section-score{
     display: flex;
-    justify-content: flex-end;
-}
-
-.page1 {
-    display: none;
-    background-color: rgb(37, 91, 60);
+    justify-content: space-evenly;
+    font-size:1em;
+    background-color: rgb(0, 0, 0);
+    color:white;
     padding: 20px;
 }
-
-.page2 {
-    display: none;
-    background-color: rgb(37, 91, 60);
+#currentScore, #highScore{
+    width:30px;
+}
+.section-a{
+    background-color: rgb(237, 237, 237);
+    color: #222;
     padding: 20px;
+    text-align: center;
 }
-
-.mLeft {
-    background-color: rgb(37, 91, 60);
-    padding: 10px;
-}
-
-.mRight {
-    background-color: rgb(37, 91, 60);
-    padding: 10px;
-}
-
-table {
-    border: 1px solid black
-}
-
-table td {
-    border: 1px solid rgb(34, 79, 53);
-    padding: 10px;
-}
-
-
-/* Extra Items */
-.freeze {
-    background-color: rgb(165, 177, 103);
-    /* padding:20px;
-    font-size: 24px; */
-}
-
-#btn_dice {
-    padding: 20px;
-    font-size: 1.2em;
-}
-
-
-
-/* Draw the dice */
-
-#diceBox {
+.section-b{
     display: flex;
-    justify-content: start;
+    background-color: rgb(34, 34, 34);
+    color: #222;
+    padding: 10px;
+}
+.col{
+    width:50%;
+    /* background: rgb(19, 19, 19); */
+    padding:5px;
+    color:white;
+}
+.points{
+    background-color: rgb(255, 255, 255);
+    height:48px;
+    width:48px;
+    color:#333;
+    padding:0px;
+    margin-bottom:0px;
+    font-size:20px;
+    line-height: 50px;
+    font-weight:bold;
+    text-align: center;
+    border: 1px solid black;
+}
+.description{
+    font-weight: normal;
+    font-size: 12px;
+    height: 38px;
+    padding:6px;
+    letter-spacing: 2px;
+}.description b{
+    color:rgb(140, 221, 255);
+}
+#sbBtn1, #sbBtn2, #sbBtn3, #sbBtn4, #sbBtn5, #sbBtn6,
+#sbBtnChance{
+    width:50px;
+    height:50px;
+    border-radius: 7px;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: center;
+}
+#sbBtn1{background-image: url('img/steen1.png');}
+#sbBtn2{background-image: url('img/steen2.png');}
+#sbBtn3{background-image: url('img/steen3.png');}
+#sbBtn4{background-image: url('img/steen4.png');}
+#sbBtn5{background-image: url('img/steen5.png');}
+#sbBtn6{background-image: url('img/steen6.png');}
+#sbBtnChance{background-image: url('img/perspective-dice-six-faces-random.png');}
+
+.section-c{
+    background-color: rgb(160, 160, 160);
+    color: #222;
+    padding: 10px;
+}
+
+.diceBar{
+    display: flex;
+    justify-content: space-evenly;
+}
+#debug{
+    display: flex;
+    flex-direction: row;
+}
+.steenElement{
+    background-color: white;
+    color:black;
+    border: 1px solid black;
+    /* padding:15px; */
+    margin:5px;
+    border-radius:5px;
+    width:50px;
+    height:50px;
+    
+}
+.die{
+    width:20%;
+    padding:10px;
+}
+
+.actionBar{
+    display: flex;
+}
+.action{
+    width:50%;
+}
+#action1{
+    width:100%;
+    background: rgb(190, 224, 244);
+    padding:10px;
+    border:10px solid black;
+}
+#action2{
+    width:100%;
+    background: rgb(138, 164, 138);
+    padding: 10px;
+    border:10px solid black;
+    display: none;
+}
+
+.footer{
+    text-align: center;
+    color: #333;
+    padding:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
+.dieBtn{
     padding: 20px;
-    background-color: seagreen;
-    border: 3px solid #333;
+    margin: 10px;
     border-radius: 10px;
+    font-size: large;
 }
 
-#diceBox2 {
-    display: flex;
-    justify-content: start;
-    padding: 20px;
-    background-color: seagreen;
-    border: 5px solid #333;
-    border-style: dashed;
+.dieBtnActive{
+    background-color: crimson;
+    color: ghostwhite;
 }
 
-.dot {
-    width: 12px;
-    height: 12px;
-    background-color: #292929;
-    border-radius: 90px;
-}
-
-/* First Die */
-
-#d1,
-#d2,
-#d3,
-#d4,
-#d5,
-#d6 {
-    float: left;
-}
-
-.diceOne {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    margin-right:10px;
-    background-color: rgb(255, 242, 228);
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: rgb(38, 85, 44) 0px 5px 5px;
-}
-
-/* Second Die */
-
-.diceTwo {
-    display: flex;
-    justify-content: space-between;
-    width: 50px;
-    height: 50px;
-    margin-right:10px;
-    background-color: rgb(255, 242, 228);
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: rgb(38, 85, 44) 0px 5px 5px;
-}
-
-.diceTwo .dot:nth-of-type(2) {
-    align-self: flex-end;
-}
-
-/* Third Die */
-
-.diceThree {
-    display: flex;
-    justify-content: space-between;
-    width: 50px;
-    height: 50px;
-    margin-right:10px;
-    background-color: rgb(255, 242, 228);
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: rgb(38, 85, 44) 0px 5px 5px;
-}
-
-.diceThree .dot:nth-of-type(2) {
-    align-self: center;
-}
-
-.diceThree .dot:nth-of-type(3) {
-    align-self: flex-end;
-}
-
-/* Fourth Die */
-
-.diceFour {
-    display: flex;
-    justify-content: space-between;
-    width: 50px;
-    height: 50px;
-    margin-right:10px;
-    background-color: rgb(255, 242, 228);
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: rgb(38, 85, 44) 0px 5px 5px;
-}
-
-.diceFour .column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Fifth Die */
-
-.diceFive {
-    display: flex;
-    justify-content: space-between;
-    width: 50px;
-    height: 50px;
-    margin-right:10px;
-    background-color: rgb(255, 242, 228);
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: rgb(38, 85, 44) 0px 5px 5px;
-}
-
-.diceFive .column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.diceFive .dot:nth-of-type(2) {
-    align-self: center;
-}
-
-/* Sixth Die */
-
-.diceSix {
-    display: flex;
-    justify-content: space-between;
-    width: 50px;
-    height: 50px;
-    margin-right:10px;
-    background-color: rgb(255, 242, 228);
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: rgb(38, 85, 44) 0px 5px 5px;
-}
-
-.diceSix .column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-
-/* Rules for mobile */
-
-@media only screen and (max-width: 700px) {
-    .large {
-        font-size: 4em;
-        text-align: center;
-    }
-
-    .container {
-        padding: 20px;
-        text-align: center;
-    }
+#assignScoreBtn{
+    display: none;
 }

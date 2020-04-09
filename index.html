@@ -4,142 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-
-    <title>Yahtzee</title>
+    <title>Yahtzee_test_file</title>
 </head>
 
 <body>
-    <div class="container" id="container">
-        <h1 class="large">YAHTZEE</h1>
-        <button id="btn_dice" onclick="throwDice()">Gooi dobbelstenen</button><br /><br />
-        <h3>Dobbelbak</h3>
-        <div id="diceBox"></div>
-        <h3>Opnieuw gooien</h3>
-        <div id="diceBox2"></div>
-        <br />
-        <div class="menu">
-            <div class="mLeft">
-                <h2 onclick="score()">Scoreblok</h2>
+    <div class="container">
+        <div class="section-a">
+            <div class="largeTitle">Classic Dice Game</div>
+        </div>
+        <div class="section-score">
+            Current score: <input type="text" id="currentScore">
+            High score: <input type="text" id="highScore">
+        </div>
+        <div class="section-b">
+            <div class="col">
+                <div id="sbBtn1"></div>
+                <div id="sbBtn2"></div>
+                <div id="sbBtn3"></div>
+                <div id="sbBtn4"></div>
+                <div id="sbBtn5"></div>
+                <div id="sbBtn6"></div>
+                <div id="sbBtnChance"></div>
             </div>
-            <div class="mRight">
-                <h2 onclick="rules()">Spelregels</h2>
+            <div class="col">
+                <div class="points" id="p1" onclick="controleerSelectie(id)"></div>
+                <div class="points" id="p2" onclick="controleerSelectie(id)"></div>
+                <div class="points" id="p3" onclick="controleerSelectie(id)"></div>
+                <div class="points" id="p4" onclick="controleerSelectie(id)"></div>
+                <div class="points" id="p5" onclick="controleerSelectie(id)"></div>
+                <div class="points" id="p6" onclick="controleerSelectie(id)"></div>
+            </div>
+            <div class="col">
+                <div class="description"><b>3 OF A KIND</b><br />Totaal stenen</div>
+                <div class="description"><b>4 OF A KIND</b><br />Totaal stenen</div>
+                <div class="description"><b>FULL HOUSE</b><br />25 punten</div>
+                <div class="description"><b>KLEINE straat</b><br />30 punten</div>
+                <div class="description"><b>GROTE straat</b><br />40 punten</div>
+                <div class="description"><b>YAHTZEE</b><br />50 punten</div>
+                <div class="description"><b>CHANCE</b><br />Totaal stenen</div>
+            </div>
+            <div class="col">
+                <div class="points" id="p7" onclick="controleerSelectie(id)"></div>
+                <div class="points" id="p8" onclick="controleerSelectie(id)"></div>
+                <div class="points" id="p9" onclick="controleerSelectie(id)"></div>
+                <div class="points" id="p10" onclick="controleerSelectie(id)"></div>
+                <div class="points" id="p11" onclick="controleerSelectie(id)"></div>
+                <div class="points" id="p12" onclick="controleerSelectie(id)"></div>
+                <div class="points" id="p13" onclick="controleerSelectie(id)"></div>
             </div>
         </div>
-        <div class="page1" id="page1">
-            <h2>Yahtzee Scoreblok</h2>
-            <table cellspacing="0" cellpadding="0">
-                <tr>
-                    <td>Deel 1</td>
-                    <td>puntentelling</td>
-                    <td>1e spel</td>
-                </tr>
-                <tr>
-                    <td>Enen</td>
-                    <td>tel alle enen</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Tweeen</td>
-                    <td>tel alle tweeen</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Drieen</td>
-                    <td>tel alle drieen</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Vieren</td>
-                    <td>tel alle vieren</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Vijven</td>
-                    <td>tel alle vijven</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Zessen</td>
-                    <td>tel alle zessen</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="2">totaal aantal punten</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Bonus (63 of meer = 35 extra)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="2">totaal deel 1</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Deel 2</td>
-                    <td>puntentelling</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Three of a kind</td>
-                    <td>totaal v.d. 5 stenen</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Carré</td>
-                    <td>totaal v.d. 5 stenen</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Full House</td>
-                    <td>25 punten</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Kleine Straat</td>
-                    <td>30 punten</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Grote Straat</td>
-                    <td>40 punten</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Yahtzee</td>
-                    <td>50 punten</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Chance</td>
-                    <td>totaal v.d. 5 stenen</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="2">totaal onderste helft</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="2">totaal bovenste helft</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="2">totaal generaal</td>
-                    <td></td>
-                </tr>
-            </table>
+        <div class="section-c">
+            <div class="diceBar">
+                <!-- Hier debug ik tijdelijk -->
+                <div id="debug"></div>
+            </div>
+            
+            <div class="actionBar">
+                <div class="action"><button id="action1" onclick="werpDobbelstenen()">DOBBELEN</button></div>
+                <div class="action"><button id="action2" onclick="speelDobbelstenen()">SPELEN</button></div>
+            </div>
         </div>
-        <div class="page2" id="page2">
-            <h2>Yahtzee Spelregels</h2>
-            <p>https://nl.wikipedia.org/wiki/Yahtzee</p>
+        <div class="footer">
+            <h2>Classic Dice Game</h2>by Milton Bradley<br /><br />Icons by: https://game-icons.net
         </div>
-        <br />
-
-
     </div>
-    <script src="logic.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
