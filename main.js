@@ -1,4 +1,5 @@
 let worp = 0;
+let status = 0;
 
 function werpDobbelstenen(){
     telWorp();
@@ -22,11 +23,13 @@ function telWorp(){
 
 function maakRandomNr(){
     let steenAantal = 5;
+    let plaats = 0;
     document.getElementById('debug').innerHTML = '';
     for(i=0;i<steenAantal;i++){
         let steenAantal = Math.floor(Math.random() * 6) + 1;
-        console.log(steenAantal);
-        document.getElementById('debug').innerHTML += "<div class=\"steenElement\" id="+ steenAantal +"  onclick='controleerSelectie(id)'><img src='img/steen" + steenAantal + ".png' width='50px'></div>";
+        plaats += 1;
+        console.log('Nr:' + steenAantal + ' staat op plek: ' + plaats);
+        document.getElementById('debug').innerHTML += "<div class=\"steenElement\" id="+ steenAantal +'_'+ plaats +"  onclick='schakelStatus(id)'><img src='img/steen" + steenAantal + ".png' width='50px'></div>";
     }
 }
 
@@ -42,4 +45,20 @@ function speelDobbelstenen(){
 
 function controleerSelectie(id){
     console.log(id);
+}
+
+function schakelStatus(id){
+    console.log(id);
+    if(document.getElementById(id).classList == 'steenElement'){
+        console.log('Deze dobbelsteen houd ik vast.');
+        document.getElementById(id).classList.add('onHold');
+        document.getElementById(id).classList.remove('steenElement');
+        console.log(id.slice(0,1));
+    }else{
+        if(document.getElementById(id).classList == 'onHold'){
+            console.log('Deze dobbelsteen laat ik weer los.');
+            document.getElementById(id).classList.add('steenElement');
+            document.getElementById(id).classList.remove('onHold');
+        }
+    }    
 }
