@@ -3,6 +3,11 @@
 Activeer Chrome Developer Tools (console) voor meer info en context.
 * Bekijk hier het project: https://mikejongsma.github.io/yahtzee/
 
+### Screenshots
+
+![Screenshot]
+(https://github.com/mikejongsma/yahtzee/blob/master/img/screenshot.png)
+
 ### Refactoring Code
 
 1. [ x ] - Functies die per element hetzelfde uitvoeren herschrijven naar 1 functie.
