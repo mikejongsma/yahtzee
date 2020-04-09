@@ -1,7 +1,5 @@
 # Yahtzee - het dobbelspel.
 
-https://mikejongsma.github.io/yahtzee/
-
 Activeer Chrome Developer Tools (console) voor meer info en context.
 
 ### Refactoring Code
@@ -14,3 +12,8 @@ Activeer Chrome Developer Tools (console) voor meer info en context.
 * [ x ] - Check inbouwen voor aantal te gooien dobbelstenen per beurt.
 * [] - Totale waarde van punten aan chance toekennen om te verdelen bij 'chance'.
 * [] - Totale waarde van punten toekennen aan 1e deel van het spel. (aantal 1en, 2en, 3en etc...).
+
+# Week 15
+
+* [ 09/04/2020 ]
+Deze week heb ik me bezig gehouden met het heropzetten van mijn 'klassiek dobbelspel' van Milton Bradley (MB). De huidige versie is nóg niet speelbaar maar aan de achterkant een stuk overzichtelijker. 
