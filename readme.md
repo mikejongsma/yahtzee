@@ -5,8 +5,7 @@ Activeer Chrome Developer Tools (console) voor meer info en context.
 
 ### Screenshots
 
-![Screenshot]
-(https://github.com/mikejongsma/yahtzee/blob/master/img/screenshot.png)
+![Screenshot](/img/screenshot.png?raw=true)
 
 ### Refactoring Code
 
