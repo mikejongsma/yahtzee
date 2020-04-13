@@ -11,13 +11,16 @@ function telWorp(){
     if(worp == 1){
         console.log('Je hebt 1 x gegooid met de dobbelstenen.');
         document.getElementById('action2').style.display = 'block';
+        document.getElementById('beurt1').style.backgroundColor = 'green';
     }
     if(worp == 2){
         console.log('Je hebt 2 x gegooid met de dobbelstenen.');
+        document.getElementById('beurt2').style.backgroundColor = 'green';
     }
     if(worp == 3){
         console.log('Je hebt 3 x gegooid. Verdeel nu je punten');
         document.getElementById('action1').disabled = true;
+        document.getElementById('beurt3').style.backgroundColor = 'green';
     }
 }
 
@@ -39,6 +42,9 @@ function speelDobbelstenen(){
     if(document.getElementById('action1').disabled = true){
         document.getElementById('action1').disabled = false;
         document.getElementById('action2').style.display = 'none';
+        document.getElementById('beurt1').style.backgroundColor = 'white';
+        document.getElementById('beurt2').style.backgroundColor = 'white';
+        document.getElementById('beurt3').style.backgroundColor = 'white';
         worp = 0;
     }
 }

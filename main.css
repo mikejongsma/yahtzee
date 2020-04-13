@@ -4,6 +4,12 @@ body{
     margin: 0;
     padding: 0;
 }
+
+.regularCheckBox{
+    -webkit-appearance: none;
+    border: 1px solid black;
+    padding:5px;
+}
 .largeTitle{
     font-size:40px;
     font-weight:bold;
