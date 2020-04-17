@@ -8,7 +8,8 @@ body{
 .regularCheckBox{
     -webkit-appearance: none;
     border: 1px solid black;
-    padding:5px;
+    padding:3px;
+    margin: 1px;
 }
 .largeTitle{
     font-size:40px;
@@ -98,6 +99,7 @@ body{
 .diceBar{
     display: flex;
     justify-content: space-evenly;
+    height:70px;
 }
 #debug{
     display: flex;
