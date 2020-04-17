@@ -1,5 +1,12 @@
 let worp = 0;
 let status = 0;
+let ronde = 1;
+
+let selected = 0;
+let assigned = 0;
+
+let subDice = 0;
+let totalDice = 0;
 
 function werpDobbelstenen(){
     telWorp();
@@ -37,20 +44,32 @@ function maakRandomNr(){
 }
 
 function speelDobbelstenen(){
-    document.getElementById('debug').innerHTML = '';
-    console.log('Volgende ronde: Werp de dobbelstenen.');
-    if(document.getElementById('action1').disabled = true){
-        document.getElementById('action1').disabled = false;
-        document.getElementById('action2').style.display = 'none';
-        document.getElementById('beurt1').style.backgroundColor = 'white';
-        document.getElementById('beurt2').style.backgroundColor = 'white';
-        document.getElementById('beurt3').style.backgroundColor = 'white';
-        worp = 0;
+    //test inbouwen, als er dobbelstenen zijn geselecteerd EN als er een bestemming voor de punten is geselecteerd > dan verder.
+    
+    if((selected == 0) || (assigned == 0)){
+        console.log('selected and assigned are both false and nothing happens!')
+    }
+    else{
+        document.getElementById('debug').innerHTML = '';
+        console.log('Volgende ronde: ' + ronde + ': Werp de dobbelstenen.');
+        if(document.getElementById('action1').disabled = true){
+            document.getElementById('action1').disabled = false;
+            document.getElementById('action2').style.display = 'none';
+            document.getElementById('beurt1').style.backgroundColor = 'white';
+            document.getElementById('beurt2').style.backgroundColor = 'white';
+            document.getElementById('beurt3').style.backgroundColor = 'white';
+            worp = 0;
+            ronde += 1;
+        }
     }
 }
 
 function controleerSelectie(id){
     console.log(id);
+    if(id == 'p13'){
+        assigned = 1;
+        console.log('Wil je je punten toekennen aan Chance?: ' + subDice + ' punten toekennen.');
+    }
 }
 
 function schakelStatus(id){
@@ -59,12 +78,19 @@ function schakelStatus(id){
         console.log('Deze dobbelsteen houd ik vast.');
         document.getElementById(id).classList.add('onHold');
         document.getElementById(id).classList.remove('steenElement');
-        console.log(id.slice(0,1));
+        n = parseInt(id.slice(0,1));
+        console.log(n);
+        selected += 1;
+        // subDice.push(id.slice(0,1));
+        subDice = subDice + n;
     }else{
         if(document.getElementById(id).classList == 'onHold'){
             console.log('Deze dobbelsteen laat ik weer los.');
             document.getElementById(id).classList.add('steenElement');
             document.getElementById(id).classList.remove('onHold');
+            selected -= 1;
+            n = parseInt(id.slice(0,1));
+            subDice = subDice - n;
         }
     }    
 }
